@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-accent: #69cf65;
+    --ff-title: "Montserrat", sans-serif;
+    --ff-body: "Roboto", sans-serif;
+
+    /* Brand Colors */
+    --clr-youtube: #ff0000;
+    --clr-github: #181717;
+    --clr-linkedin: #0a66c2;
+}
+
+body {
+    background: #232323;
+    color: #f5f5f5;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure header stays on top */
+    border-bottom: 1px solid var(--clr-accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(8px);
+    background: #232323cc;
+}
+
+.menu-list {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    font-family: var(--ff-body);
+}
+
+.logo {
+    font-family: var(--ff-title);
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+.hero {
+    max-width: 950px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 180px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Adjusted for larger image */
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 2rem; /* Keep this margin for spacing between image/name and the description below */
+}
+
+.hero-content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Changed to 50% for circular image */
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    max-width: 600px; /* Constrain max width to prevent stretching */
+}
+
+.hero-title {
+    font-family: var(--ff-title);
+    font-size: 3rem; /* Adjusted from 3.8rem to 3rem */
+    line-height: 1.1;
+    color: #fff;
+}
+
+.hero-roles {
+    font-family: var(--ff-body);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: #f5f5f5;
+    margin-bottom: 1rem;
+    align-self: flex-start; /* Prevent stretching during typewriter animation */
+}
+
+.hero-description {
+    font-family: var(--ff-body);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #f5f5f5;
+    padding: 0;
+    text-align: left;
+}
+
+.hero-description:hover {
+    box-shadow: none;
+}
+
+.hero-text {
+    font-family: var(--ff-body);
+    font-size: 1.1rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-accent);
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.icon-btn:hover {
+    background: #23232344;
+}
+
+.footer {
+    margin-top: 3rem;
+    padding: 2rem 0 1rem 0;
+    border-top: 2px solid var(--clr-accent); /* Added border-top */
+    background: #232323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.footer-social {
+    display: flex;
+    gap: 1.5rem; /* Adjusted gap */
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    transition: transform 0.2s;
+    color: #f5f5f5; /* Set icon color */
+}
+.footer-icon svg {
+    width: 48px; /* Adjusted icon size to accommodate new SVGs */
+    height: 48px; /* Adjusted icon size */
+    object-fit: contain; /* Ensure smaller icons scale up without cropping */
+}
+
+/* Default (Dark Theme) Icon Styles */
+.footer-icon-youtube path {
+    fill: #fff;
+}
+
+.footer-icon-github path {
+    fill: #fff;
+}
+
+.footer-icon-linkedin circle {
+    fill: #fff;
+}
+
+.footer-icon-linkedin path {
+    fill: #232323;
+}
+
+/* Hover Styles (Dark Theme) */
+.footer-icon:hover .footer-icon-youtube path {
+    fill: var(--clr-youtube);
+}
+
+.footer-icon:hover .footer-icon-github path {
+    fill: var(--clr-github);
+}
+
+.footer-icon:hover .footer-icon-linkedin circle {
+    fill: var(--clr-linkedin);
+}
+
+.footer-icon:hover .footer-icon-linkedin path {
+    fill: #fff;
+}
+
+/* Tema claro - Footer Icon Styles */
+body.light .footer-icon-youtube path {
+    fill: var(--clr-youtube);
+}
+
+body.light .footer-icon-github path {
+    fill: var(--clr-github);
+}
+
+body.light .footer-icon-linkedin circle {
+    fill: var(--clr-linkedin);
+}
+
+body.light .footer-icon-linkedin path {
+    fill: #fff;
+}
+
+/* Tema claro - Footer Icon Hover Styles */
+body.light .footer-icon:hover .footer-icon-youtube path {
+    fill: var(--clr-youtube);
+}
+
+body.light .footer-icon:hover .footer-icon-github path {
+    fill: var(--clr-github);
+}
+
+body.light .footer-icon:hover .footer-icon-linkedin circle {
+    fill: var(--clr-linkedin);
+}
+
+body.light .footer-icon:hover .footer-icon-linkedin path {
+    fill: #232323;
+}
+
+.footer-info {
+    color: #f5f5f5;
+    font-family: var(--ff-body);
+    font-size: 1rem;
+    text-align: center;
+    max-width: 600px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lang-svg-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lang-btn svg {
+    display: block;
+}
+.lang-btn:hover svg circle,
+.lang-btn:focus svg circle {
+    stroke: #fff;
+}
+.lang-btn:hover svg rect,
+.lang-btn:focus svg rect {
+    stroke: #fff;
+}
+
+.hero-social-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.social-card {
+    background: #232323;
+    border: 2px solid var(--clr-accent);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    width: 320px;
+    color: #f5f5f5;
+    box-shadow: 0 2px 16px 0 #ff660033;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+.social-card h3 {
+    font-size: 2rem;
+    font-family: var(--ff-title);
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.social-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--ff-body);
+}
+.social-card-link {
+    background: var(--clr-accent);
+    color: #232323;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--ff-body);
+    transition: background 0.2s, color 0.2s;
+}
+.social-card-link:hover {
+    background: #fff;
+    color: var(--clr-accent);
+}
+.social-card:hover {
+    box-shadow: 0 4px 32px 0 #27a807;
+    transform: translateY(-6px) scale(1.03);
+}
+
+.social-card-youtube:hover {
+    background-color: var(--clr-youtube);
+    border-color: var(--clr-youtube);
+}
+
+.social-card-youtube:hover .social-card-link {
+    background-color: #fff;
+    color: var(--clr-youtube);
+}
+
+.social-card-github:hover {
+    background-color: var(--clr-github);
+    border-color: var(--clr-github);
+}
+
+.social-card-github:hover .social-card-link {
+    background-color: #fff;
+    color: var(--clr-github);
+}
+
+.social-card-linkedin:hover {
+    background-color: var(--clr-linkedin);
+    border-color: var(--clr-linkedin);
+}
+
+.social-card-linkedin:hover .social-card-link {
+    background-color: #fff;
+    color: var(--clr-linkedin);
+}
+
+/* Tema claro */
+body.light {
+    background: #F5F0E5;
+    color: #232323;
+}
+body.light .header {
+    background: #F5F0E5cc;
+    border-bottom: 1px solid #232323;
+}
+body.light .logo,
+body.light .footer-info {
+    color: #232323;
+}
+body.light .footer {
+    background: #F5F0E5;
+    border-top: 2px solid #232323; /* Added border-top for light theme */
+}
+body.light .footer-icon:hover {
+    color: var(--clr-accent);
+}
+
+body.light .footer-icon-youtube path {
+    fill: #232323;
+}
+
+body.light .footer-icon-github path {
+    fill: #232323;
+}
+
+body.light .footer-icon-linkedin path {
+    fill: #232323;
+}
+
+body.light .footer-icon:hover .footer-icon-youtube path {
+    fill: var(--clr-youtube);
+}
+
+body.light .footer-icon:hover .footer-icon-github path {
+    fill: var(--clr-github);
+}
+
+body.light .footer-icon:hover .footer-icon-linkedin path {
+    fill: var(--clr-linkedin);
+}
+
+body.light .hero-title {
+    color: #232323;
+}
+body.light .social-card {
+    background: #fff;
+    color: #232323;
+    border: 2px solid #232323;
+}
+body.light .social-card h3 {
+    color: #232323;
+}
+body.light .social-card-link {
+    background: #232323;
+    color: #fff;
+}
+body.light .social-card-link:hover {
+    background: var(--clr-accent);
+    color: #232323;
+}
+
+body.light .social-card-youtube:hover {
+    background-color: var(--clr-youtube);
+    border-color: var(--clr-youtube);
+}
+
+body.light .social-card-youtube:hover .social-card-link {
+    background-color: #232323;
+    color: #fff;
+}
+
+body.light .social-card-github:hover {
+    background-color: var(--clr-github);
+    border-color: var(--clr-github);
+}
+
+body.light .social-card-github:hover h3,
+body.light .social-card-github:hover p {
+    color: #fff; /* Ensure text is white on hover for readability */
+}
+
+body.light .social-card-github:hover .social-card-link {
+    background-color: #fff;
+    color: #232323;
+}
+
+body.light .social-card-linkedin:hover {
+    background-color: var(--clr-linkedin);
+    border-color: var(--clr-linkedin);
+}
+
+body.light .social-card-linkedin:hover .social-card-link {
+    background-color: #232323;
+    color: #fff;
+}
+
+body.light .hero-description {
+    color: #232323;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    .icon-btn {
+        padding: 0.2rem;
+    }
+
+    .icon-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero {
+        padding-top: 120px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 110px 1fr;
+        gap: 0.5rem;
+        align-items: center;
+        justify-items: center;
+        padding: 0 1rem; /* Added padding to prevent text from sticking to edges */
+    }
+
+    .hero-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        max-width: 100%; /* Ensure it fills available space on mobile */
+    }
+
+    .hero-content img {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 50%; /* Changed to 50% for circular image */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem; /* Adjusted from 1.7rem to 1.5rem for mobile */
+        text-align: left;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        padding: 0 1.5rem; /* Added horizontal padding for mobile */
+        text-align: left;
+    }
+
+    .hero-social-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .social-card {
+        width: 90%;
+        padding: 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .social-card p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0 0.8rem 0;
+        gap: 1rem;
+    }
+
+    .footer-social {
+        gap: 1rem;
+    }
+
+    .footer-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-info {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+}
+
+/* New styles for typewriter animation from prueba.html */
+.typewriter {
+    /* white-space: nowrap; */ /* Removed to allow text wrapping */
+    /* border-right: 2px solid var(--clr-accent); */ /* Removed to create independent cursor */
+    /* animation: blink 0.7s step-end infinite; */ /* Removed to create independent cursor */
+    display: inline-block; /* Add inline-block to shrink-wrap content */
+    width: fit-content; /* Ensure width adjusts to content */
+}
+
+/* Dynamic cursor style */
+.dynamic-cursor {
+    display: inline-block;
+    background-color: var(--clr-accent);
+    width: 2px;
+    height: 1.2em; /* Adjust to match line height of hero-title */
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    0% { background-color: transparent; }
+    50% { background-color: var(--clr-accent); }
+    100% { background-color: transparent; }
+}
+
+.tag {
+    color: #569CD6; /* VS Code blue for HTML tags */
+}
+.text {
+    color: #CE9178; /* VS Code orange for string literals, to make it look like a string */
+}
+
+.final {
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    animation: none;
+}

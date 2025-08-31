@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación Nombre</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: monospace;
+    }
+
+    .code {
+      font-size: 24px;
+      color: #fff;
+      white-space: pre;
+      overflow: hidden;
+      border-right: 2px solid #00ffcc;
+    }
+
+    .tag {
+      color: #569CD6; /* azul VS Code */
+    }
+    .text {
+      color: #D4D4D4; /* gris claro */
+    }
+    .final {
+      color: white;
+      border: none;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { border-color: transparent; }
+      25%, 75% { border-color: #00ffcc; }
+    }
+  </style>
+</head>
+<body>
+  <div id="typing" class="code"></div>
+
+  <script>
+    const element = document.getElementById("typing");
+
+    const codeLine = `<span class="tag">&lt;h1&gt;</span> <span class="text">Felipe Ponce de Leon Espinosa</span> <span class="tag">&lt;/h1&gt;</span>`;
+    let index = 0;
+
+    function typeEffect() {
+      if (index < codeLine.length) {
+        element.innerHTML = codeLine.substring(0, index + 1);
+        index++;
+        setTimeout(typeEffect, 50); // velocidad de escritura
+      } else {
+        // cuando termina de escribir
+        element.style.animation = "blink 0.6s step-end 2"; // parpadea 2 veces
+        setTimeout(() => {
+          element.classList.add("final");
+          element.textContent = "Felipe Ponce de Leon Espinosa"; // solo el texto final en blanco
+        }, 1200); // después de 2 parpadeos
+      }
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>

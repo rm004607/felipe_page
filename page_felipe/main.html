@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="documentTitle">FelipeDev</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" href="./assets/felipefoto.jpeg" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <p class="logo" data-i18n="logoText">FelipeDev.</p>
+        <div class="header-actions">
+            <button id="theme-toggle" data-i18n-title="themeToggleTitle" title="Cambiar tema" class="icon-btn">
+                <!-- Sol SVG -->
+                
+            </button>
+            <button id="lang-toggle" data-i18n-title="langToggleTitle" title="Cambiar idioma" class="icon-btn lang-btn">
+                <span class="lang-svg-wrap">
+                    <!-- Usando el SVG de assets/icono.svg -->
+                    <img src="./assets/icono.svg" alt="Traductor" style="width:32px;height:32px;">
+                </span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="./assets/felipefoto.jpeg" alt="Foto de Felipe">
+                <div class="hero-info">
+                    <h1 class="hero-title typewriter" id="hero-title" data-i18n="heroTitle"></h1>
+                    <p class="hero-roles" data-i18n="heroRoles">Ingeniero en Informática | Head of Tech | Product Owner | Emprendedor Tech | Backend Developer Node.js - JavaScript - Python</p>
+                </div>
+            </div>
+            <p class="hero-description" id="hero-description" data-i18n="heroDescription">
+                Profesional con más de 10 años de experiencia en la implementación de mejoras tecnológicas. Enfocado principalmente en la estrategia del negocio, la gestión de personas y recursos informáticos. Conocimientos en administración y desarrollo de plataformas modernas, así como en soluciones analíticas para la toma de decisiones gerenciales.
+            </p>
+            <div class="hero-social-cards">
+                <div class="social-card social-card-youtube">
+                    <h3 data-i18n="youtubeTitle">YouTube</h3>
+                    <p data-i18n="youtubeDescription">Videos sobre desarrollo web, tutoriales y recursos gratuitos.</p>
+                    <a href="https://www.youtube.com/" target="_blank" class="social-card-link" data-i18n="visitLink">Visitar</a>
+                </div>
+                <div class="social-card social-card-github">
+                    <h3 data-i18n="githubTitle">GitHub</h3>
+                    <p data-i18n="githubDescription">Repositorios, proyectos y código abierto de Felipe.</p>
+                    <a href="https://github.com/felipeponcedeleon" target="_blank" class="social-card-link" data-i18n="visitLink">Visitar</a>
+                </div>
+                <div class="social-card social-card-linkedin">
+                    <h3 data-i18n="linkedinTitle">LinkedIn</h3>
+                    <p data-i18n="linkedinDescription">Perfil profesional y experiencia de Felipe Ponce de León Espinosa.</p>
+                    <a href="https://www.linkedin.com/in/felipeponcedeleon/" target="_blank" class="social-card-link" data-i18n="visitLink">Visitar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="./main.js"></script>
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube" class="footer-icon footer-icon-youtube">
+                <span class="footer-icon-box">
+                    <svg enable-background="new 0 0 128 128" id="Social_Icons" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x34__stroke"><g id="Youtube_1_"><rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"/><path clip-rule="evenodd" d="M126.72,38.224c0,0-1.252-8.883-5.088-12.794    c-4.868-5.136-10.324-5.16-12.824-5.458c-17.912-1.305-44.78-1.305-44.78-1.305h-0.056c0,0-26.868,0-44.78,1.305    c-2.504,0.298-7.956,0.322-12.828,5.458C2.528,29.342,1.28,38.224,1.28,38.224S0,48.658,0,59.087v9.781    c0,10.433,1.28,20.863,1.28,20.863s1.248,8.883,5.084,12.794c4.872,5.136,11.268,4.975,14.116,5.511    c10.24,0.991,43.52,1.297,43.52,1.297s26.896-0.04,44.808-1.345c2.5-0.302,7.956-0.326,12.824-5.462    c3.836-3.912,5.088-12.794,5.088-12.794S128,79.302,128,68.868v-9.781C128,48.658,126.72,38.224,126.72,38.224z M50.784,80.72    L50.78,44.501l34.584,18.172L50.784,80.72z"/>
+</g></g></svg>
+                </span>
+            </a>
+            <a href="https://github.com/felipeponcedeleon" target="_blank" title="GitHub" class="footer-icon footer-icon-github">
+                <span class="footer-icon-box">
+                    <svg enable-background="new 0 0 128 128" id="Social_Icons" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x31__stroke"><g id="Github_1_"><rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"/><path clip-rule="evenodd" d="M63.996,1.333C28.656,1.333,0,30.099,0,65.591    c0,28.384,18.336,52.467,43.772,60.965c3.2,0.59,4.368-1.394,4.368-3.096c0-1.526-0.056-5.566-0.088-10.927    c-17.804,3.883-21.56-8.614-21.56-8.614c-2.908-7.421-7.104-9.397-7.104-9.397c-5.812-3.988,0.44-3.907,0.44-3.907    c6.42,0.454,9.8,6.622,9.8,6.622c5.712,9.819,14.98,6.984,18.628,5.337c0.58-4.152,2.236-6.984,4.064-8.59    c-14.212-1.622-29.152-7.132-29.152-31.753c0-7.016,2.492-12.75,6.588-17.244c-0.66-1.626-2.856-8.156,0.624-17.003    c0,0,5.376-1.727,17.6,6.586c5.108-1.426,10.58-2.136,16.024-2.165c5.436,0.028,10.912,0.739,16.024,2.165    c12.216-8.313,17.58-6.586,17.58-6.586c3.492,8.847,1.296,15.377,0.636,17.003c4.104,4.494,6.58,10.228,6.58,17.244    c0,24.681-14.964,30.115-29.22,31.705c2.296,1.984,4.344,5.903,4.344,11.899c0,8.59-0.08,15.517-0.08,17.626    c0,1.719,1.152,3.719,4.4,3.088C109.68,118.034,128,93.967,128,65.591C128,30.099,99.344,1.333,63.996,1.333"/>
+</g></g></svg>
+                </span>
+            </a>
+            <a href="https://www.linkedin.com/in/felipeponcedeleon/" target="_blank" title="LinkedIn" class="footer-icon footer-icon-linkedin">
+                <span class="footer-icon-box">
+                    <svg id="Capa_1" style="enable-background:new 0 0 112.196 112.196;" version="1.1" viewBox="0 0 112.196 112.196" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle cx="56.098" cy="56.097" r="56.098"/><g><path d="M89.616,60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118    c-3.705,0-5.906,2.491-6.878,4.903c-0.353,0.862-0.444,2.059-0.444,3.268v22.524H48.684c0,0,0.18-36.546,0-40.329h13.411v5.715    c-0.027,0.045-0.065,0.089-0.089,0.132h0.089v-0.132c1.782-2.742,4.96-6.662,12.085-6.662    C83.002,42.462,89.616,48.226,89.616,60.611L89.616,60.611z M34.656,23.969c-4.587,0-7.588,3.011-7.588,6.967    c0,3.872,2.914,6.97,7.412,6.97h0.087c4.677,0,7.585-3.098,7.585-6.97C42.063,26.98,39.244,23.969,34.656,23.969L34.656,23.969z     M27.865,83.739H41.27V43.409H27.865V83.739z"/>
+</g></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg>
+                </span>
+            </a>
+        </div>
+        <div class="footer-info">
+            <p data-i18n="footerInfo">Felipe Ponce de León Espinosa &middot; Profesional con más de 10 años de experiencia en tecnología y gestión de negocios.</p>
+        </div>
+    </footer>
+</body>
+</html>
